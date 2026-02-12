@@ -19,7 +19,7 @@ OpenClaw users are experiencing:
 
 **Intelligent model routing that analyzes complexity and automatically selects the optimal model for each task.**
 
-> 💡 **Want all 5 infrastructure tools in one command?** Check out the [OpenClaw Infrastructure Suite](https://github.com/AtlasPA/openclaw-infrastructure) - installs and manages Smart Router + 4 other tools (Cost Governor, Memory System, Context Optimizer, Rate Limit Manager) with unified dashboard and analytics.
+> 💡 **Want all 5 infrastructure tools in one command?** Check out the [OpenClaw Infrastructure Suite](https://github.com/AtlasPA/openclaw-infrastructure) - installs and manages Smart Router + 4 other tools (Cost Governor, Memory System, Context Optimizer, API Quota Tracker) with unified dashboard and analytics.
 
 ## Features
 
