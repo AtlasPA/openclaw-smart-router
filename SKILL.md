@@ -1,5 +1,6 @@
 ---
 name: smart-router
+description: Save 30-50% on model costs through intelligent, automatic model selection based on task complexity
 user-invocable: true
 metadata: {"openclaw":{"emoji":"🎯","requires":{"bins":["node"]},"os":["darwin","linux","win32"]}}
 ---
