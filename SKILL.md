@@ -2,7 +2,7 @@
 name: smart-router
 description: Save 30-50% on model costs through intelligent, automatic model selection based on task complexity
 user-invocable: true
-metadata: {"openclaw":{"emoji":"🎯","requires":{"bins":["node"]},"os":["darwin","linux","win32"]}}
+metadata: {"openclaw":{"emoji":"🎯","requires":{"bins":["node"],"configPaths":["~/.openclaw/openclaw-smart-router"]},"os":["darwin","linux","win32"]}}
 ---
 
 # OpenClaw Smart Router
@@ -218,12 +218,37 @@ claw skill install openclaw-context-optimizer
 claw skill install openclaw-smart-router
 ```
 
-## Privacy
+## Privacy & Security
 
+**Data Storage:**
 - All data stored locally in `~/.openclaw/openclaw-smart-router/`
+- SQLite database contains: routing decisions, complexity scores, model selections, timestamps, token counts
+- No sensitive prompt content is stored - only metadata and analysis scores
+- Dashboard binds to localhost only (127.0.0.1) - not exposed to network
 - No external servers or telemetry
-- Routing happens locally (no API calls)
-- Open source - audit the code yourself
+
+**Data Retention:**
+- Free tier: 7 days of routing history
+- Pro tier: Unlimited retention (configurable)
+- You can delete all data anytime: `rm -rf ~/.openclaw/openclaw-smart-router/`
+
+**Payment Security:**
+- x402 payments require explicit user authorization via platform wallet
+- No private keys or credentials are stored by this skill
+- Payment subscriptions can be cancelled anytime
+- **IMPORTANT**: Review and approve any payment transactions before confirming
+- Skill does NOT have autonomous access to your wallet - payments require user consent
+
+**What This Skill Can See:**
+- Request metadata: model, provider, timestamp
+- Complexity analysis: task scoring based on request structure
+- Token usage: input/output token counts from responses
+- **Does NOT store**: actual prompt text, responses, or sensitive user data
+
+**Audit & Trust:**
+- Open source - audit the code yourself at https://github.com/AtlasPA/openclaw-smart-router
+- No network calls except to configured LLM providers (same as normal usage)
+- Hooks are transparent: request:before, provider:after, session:end
 
 ## Dashboard
 
